@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>简易计算器</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<!--//声明css代码域-->
+	<style type="text/css">
+		
+		#showdiv{
+			border: solid 2px;
+			height: 450px;
+			width: 300px;
+			text-align: center;
+			background-color: bisque;
+			border-radius: 20px;
+			margin: auto;
+		}
+		#input{
+			margin-top: 25px;
+			margin-bottom: 20px;
+			height: 35px;
+			width: 270px;
+			font-size: 20px;
+			color: coral;
+		}
+		input[type=button]{
+			height: 50px;
+			width: 50px;
+			margin: 10px;
+			border-radius: 5px;
+			background-color: aliceblue;
+			font-size: 20px;
+			color: blueviolet;
+			
+			/*margin-top: 10px;*/
+		}
+		#title{
+			margin-top: 5px;
+			font-size: 25px;
+			color: crimson;
+			font-family: 华文行楷;
+		}
+		#name{
+			font-family: "微软雅黑";
+			/*margin-bottom: 20px;*/
+		}
+		body{
+			background-image: url(image/5.jpg);
+			background-size: contain;
+			
+		}
+		
+	</style>
+	<!--//声明JavaScript代码域-->
+	<script type="text/javascript">
+		function test(temp){
+//		document.getElementById("input").value	= temp.value;
+		switch (temp.value){
+			case "=":
+				document.getElementById("input").value = document.getElementById("input").value+"="+eval(document.getElementById("input").value);
+				break;
+			case "C":
+				document.getElementById("input").value ="";
+				break;
+			default:
+				document.getElementById("input").value = document.getElementById("input").value+temp.value;
+				break;
+		}
+		}
+	</script>
+	<body>
+	<div id="showdiv">
+		<div id="title">
+			简易计算器	
+		</div>
+		<div id="name">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			-作者:高哲
+		</div>
+		<input type="text" name="input" id="input" value="" /><br />
+		<input type="button" id="" value="1" onclick="test(this)"/>
+		<input type="button" id="" value="2" onclick="test(this)"/>
+		<input type="button" id="" value="3" onclick="test(this)"/>
+		<input type="button" id="" value="+" onclick="test(this)"/><br />
+		<input type="button" id="" value="4" onclick="test(this)"/>
+		<input type="button" id="" value="5" onclick="test(this)"/>
+		<input type="button" id="" value="6" onclick="test(this)"/>
+		<input type="button" id="" value="-" onclick="test(this)"/><br />
+		<input type="button" id="" value="7" onclick="test(this)"/>
+		<input type="button" id="" value="9" onclick="test(this)"/>
+		<input type="button" id="" value="8" onclick="test(this)"/>
+		<input type="button" id="" value="*" onclick="test(this)"/><br />
+		<input type="button" id="" value="/" onclick="test(this)"/>
+		<input type="button" id="" value="C" onclick="test(this)"/>
+		<input type="button" id="" value="." onclick="test(this)"/>
+		<input type="button" id="" value="=" onclick="test(this)"/>
+		
+		
+	</div>	
+	</body>
+</html>
